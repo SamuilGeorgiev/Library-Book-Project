@@ -1,0 +1,38 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px;
+  }
+  
+  /* Link styles */
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
