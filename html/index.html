@@ -1,63 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-
-  <meta charset="UTF-8">
-  <title>My Library</title>
+    <meta charset="UTF-8">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- This is the header section -->
-  <header>
+<header>
     <h1>My Library</h1>
-  </header>
+</header>
 
-  <!-- This is the main section -->
-  <main>
+<main>
+    <form id="book-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
 
-    <!-- This is the form for adding a new book -->
-    <form>
-      <label for="title">Title:</label>
-      <input type="text" id="title" name="title"><br>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
 
-      <label for="author">Author:</label>
-      <input type="text" id="author" name="author"><br>
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn" required>
 
-      <label for="pages">Pages:</label>
-      <input type="number" id="pages" name="pages"><br>
-
-      <label for="read">Read:</label>
-      <input type="checkbox" id="read" name="read"><br>
-
-      <input type="submit" value="Add Book">
+        <input type="submit" value="Add Book">
     </form>
 
-    <!-- This is the table for displaying the list of books -->
-    <table>
-      <thead>
+    <table id="book-list">
+        <thead>
         <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Pages</th>
-          <th>Read</th>
-          <th>Actions</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th></th>
         </tr>
-      </thead>
-      <tbody>
-        <!-- This is where the books will be dynamically added using JavaScript -->
-      </tbody>
+        </thead>
+        <tbody>
+        </tbody>
     </table>
+</main>
 
-  </main>
-
-  <!-- This is the footer section -->
-  <footer>
+<footer>
     <p>&copy; 2023 My Library</p>
-  </footer>
+</footer>
 
-  <!-- This is where we will add our JavaScript code -->
-  <script src="js/library.js"></script>
-
+<script src="library.js"></script>
 </body>
 </html>

@@ -26,9 +26,9 @@ function getBooks() {
   function removeBook(isbn) {
     const books = getBooks();
     books.forEach(function(book, index){
-     if(book.isbn === isbn) {
-      books.splice(index, 1);
-     }
+      if(book.isbn === isbn) {
+        books.splice(index, 1);
+      }
     });
     localStorage.setItem('books', JSON.stringify(books));
   }
@@ -44,43 +44,5 @@ function getBooks() {
       const row = document.createElement('tr');
       row.innerHTML = `
         <td>${book.title}</td>
-        <td>${book.author}</td>
-        <td>${book.isbn}</td>
-        <td><a href="#" class="delete" data-isbn="${book.isbn}">X</a></td>
-      `;
-      bookList.appendChild(row);
-    });
-  }
-  
-  /**
-   * This event listener adds a book when the form is submitted
-   */
-  document.getElementById('book-form').addEventListener('submit', function(e){
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const isbn = document.getElementById('isbn').value;
-    
-    const book = {
-      title: title,
-      author: author,
-      isbn: isbn
-    }
-    
-    addBook(book);
-    
-    displayBooks();
-    
-    e.preventDefault();
-  });
-  
-  /**
-   * This event listener removes a book when the delete button is clicked
-   */
-  document.getElementById('book-list').addEventListener('click', function(e){
-    if(e.target.className === 'delete') {
-      const isbn = e.target.getAttribute('data-isbn');
-      removeBook(isbn);
-      displayBooks();
-    }
-  });
+        <td>${book
   

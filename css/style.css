@@ -1,38 +1,110 @@
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #fff;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #0066cc;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  /* Navigation styles */
-  nav {
+/* Bookshelf container */
+.bookshelf {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    background-color: #eee;
-    padding: 10px;
+    padding: 20px;
   }
   
-  /* Link styles */
-  a {
-    color: #0066cc;
-    text-decoration: none;
+  /* Book container */
+  .book {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
   }
   
-  /* Button styles */
-  button {
-    background-color: #0066cc;
+  /* Book cover image */
+  .book img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Book title */
+  .book .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Add book button */
+  .add-book-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
     color: #fff;
     border: none;
-    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
     cursor: pointer;
+  }
+  
+  /* Form container */
+  .form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form title */
+  .form-container h2 {
+    margin-top: 0;
+  }
+  
+  /* Form input fields */
+  .form-container input[type="text"],
+  .form-container input[type="number"] {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form buttons */
+  .form-container button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Overlay */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
   }
   
